@@ -1,0 +1,10 @@
+.tmp_versions
+*.swp
+*.o
+*.o.*
+*.ko
+*.ko.*
+asus-ac51/os/linux/Makefile
+asus-ac51/os/linux/Module.symvers
+asus-ac51/os/linux/modules.order
+asus-ac51/os/linux/mt7650u_sta.mod.c
