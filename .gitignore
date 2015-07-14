@@ -13,3 +13,8 @@ mt7610u-3.0.0.1/os/linux/Module.symvers
 mt7610u-3.0.0.1/os/linux/modules.order
 mt7610u-3.0.0.1/os/linux/mt7650u_sta.mod.c
 mt7610u-3.0.0.1/debian/mt7610u-kernel-source
+mt7610u-3.0.0.2/os/linux/Makefile
+mt7610u-3.0.0.2/os/linux/Module.symvers
+mt7610u-3.0.0.2/os/linux/modules.order
+mt7610u-3.0.0.2/os/linux/mt7650u_sta.mod.c
+mt7610u-3.0.0.2/debian/mt7610u-kernel-source
