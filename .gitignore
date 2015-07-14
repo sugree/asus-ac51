@@ -4,6 +4,9 @@
 *.o.*
 *.ko
 *.ko.*
+*.log
+*.substvars
+files
 /*.changes
 /*.dsc
 /*.tar.gz
