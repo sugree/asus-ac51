@@ -1,0 +1,14 @@
+#!/bin/sh
+
+CVERSION=`dpkg-query -W -f='${Version}' mt7610u-kernel-source | awk -F "-" '{print $1}' | cut -d\: -f2`
+PACKAGE_NAME=mt7610u
+
+case "$1" in
+	configure)
+		/usr/lib/dkms/common.postinst mt7610u $CVERSION
+		rmmod mt7650u_sta
+		modprobe mt7650u_sta || :
+	;;
+esac
+
+#DEBHELPER#

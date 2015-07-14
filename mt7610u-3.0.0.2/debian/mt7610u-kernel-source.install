@@ -1,0 +1,26 @@
+ate                          usr/src/mt7610u-3.0.0.2
+chips                        usr/src/mt7610u-3.0.0.2
+common                       usr/src/mt7610u-3.0.0.2
+conf                         usr/src/mt7610u-3.0.0.2
+doc                          usr/src/mt7610u-3.0.0.2
+eeprom                       usr/src/mt7610u-3.0.0.2
+hw_ctrl                      usr/src/mt7610u-3.0.0.2
+include                      usr/src/mt7610u-3.0.0.2
+iwpriv_usage.txt             usr/src/mt7610u-3.0.0.2
+mac                          usr/src/mt7610u-3.0.0.2
+Makefile                     usr/src/mt7610u-3.0.0.2
+mcu                          usr/src/mt7610u-3.0.0.2
+mgmt                         usr/src/mt7610u-3.0.0.2
+naf                          usr/src/mt7610u-3.0.0.2
+os                           usr/src/mt7610u-3.0.0.2
+phy                          usr/src/mt7610u-3.0.0.2
+rate_ctrl                    usr/src/mt7610u-3.0.0.2
+README_STA_usb               usr/src/mt7610u-3.0.0.2
+RT2870STACard.dat            usr/src/mt7610u-3.0.0.2
+RT2870STA.dat                usr/src/mt7610u-3.0.0.2
+sta                          usr/src/mt7610u-3.0.0.2
+sta_ate_iwpriv_usage.txt     usr/src/mt7610u-3.0.0.2
+tools                        usr/src/mt7610u-3.0.0.2
+debian/dkms.conf             usr/src/mt7610u-3.0.0.2
+conf/RT2860STA.dat           etc/Wireless/RT2860STA
+

@@ -1,0 +1,11 @@
+Source: mt7610u
+Section: misc
+Priority: optional
+Maintainer: Sugree Phatanapherom <sugree@gmail.com>
+Standards-Version: 3.9.1
+Build-Depends: debhelper (>= 7.0.50~)
+
+Package: mt7610u-kernel-source
+Architecture: all
+Depends: ${misc:Depends}, dkms, linux-libc-dev, libc6-dev
+Description: mt7610u driver in DKMS format.
