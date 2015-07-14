@@ -880,10 +880,17 @@ void linux_pci_unmap_single(void *handle, ra_dma_addr_t dma_addr, size_t size, i
 #define SET_OS_PKT_LEN(_pkt, _len)	\
 		(RTPKT_TO_OSPKT(_pkt)->len) = (_len)
 		
+#ifdef NET_SKBUFF_DATA_USES_OFFSET
+#define GET_OS_PKT_DATATAIL(_pkt) \
+        (RTPKT_TO_OSPKT(_pkt)->head + (ULONG)RTPKT_TO_OSPKT(_pkt)->tail)
+#define SET_OS_PKT_DATATAIL(_pkt, _start, _len) \
+        ((RTPKT_TO_OSPKT(_pkt))->tail) = (ULONG)_start - (ULONG)(RTPKT_TO_OSPKT(_pkt)->head) + (_len)
+#else
 #define GET_OS_PKT_DATATAIL(_pkt) \
 		(RTPKT_TO_OSPKT(_pkt)->tail)
 #define SET_OS_PKT_DATATAIL(_pkt, _start, _len)	\
-		((RTPKT_TO_OSPKT(_pkt))->tail) = (PUCHAR)((_start) + (_len))
+		((RTPKT_TO_OSPKT(_pkt))->tail) = (ULONG)((_start) + (_len))
+#endif
 		
 #define GET_OS_PKT_HEAD(_pkt) \
 		(RTPKT_TO_OSPKT(_pkt)->head)

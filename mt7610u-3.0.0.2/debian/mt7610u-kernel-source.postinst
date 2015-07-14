@@ -6,8 +6,8 @@ PACKAGE_NAME=mt7610u
 case "$1" in
 	configure)
 		/usr/lib/dkms/common.postinst mt7610u $CVERSION
-		rmmod mt7650u_sta
-		modprobe mt7650u_sta || :
+		rmmod mt7610u_sta
+		modprobe mt7610u_sta || :
 	;;
 esac
 

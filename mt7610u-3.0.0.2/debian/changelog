@@ -1,3 +1,9 @@
+mt7610u (3.0.0.2-0ubuntu2~ppa1v) vivid; urgency=low
+
+  * Patch from sanrath
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 15 Jul 2015 00:19:30 +0700
+
 mt7610u (3.0.0.2-0ubuntu1~ppa1v) vivid; urgency=low
 
   * Source from mediatek
