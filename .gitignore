@@ -4,7 +4,12 @@
 *.o.*
 *.ko
 *.ko.*
-asus-ac51/os/linux/Makefile
-asus-ac51/os/linux/Module.symvers
-asus-ac51/os/linux/modules.order
-asus-ac51/os/linux/mt7650u_sta.mod.c
+/*.changes
+/*.dsc
+/*.tar.gz
+/*.deb
+mt7610u-3.0.0.1/os/linux/Makefile
+mt7610u-3.0.0.1/os/linux/Module.symvers
+mt7610u-3.0.0.1/os/linux/modules.order
+mt7610u-3.0.0.1/os/linux/mt7650u_sta.mod.c
+mt7610u-3.0.0.1/debian/mt7610u-kernel-source
