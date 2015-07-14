@@ -1,0 +1,83 @@
+MT7610U Linux Driver quick start		
+
+====================
+Check tools:  
+
+====================
+*Before install driver, please check already install compile tool and  kernel source code
+
+1>Install compile tool
+    $yum install gcc-c++
+
+2>check kernel source code exists /usr/src/kernels/ "kernel name"
+
+    Download your kernel source code
+    *http://www.kernel.org/pub/linux/kernel/ 		
+	or
+    $yum install kernel-devel
+
+
+
+====================
+Build Instructions:  
+
+====================
+1> $tar -xvf mt7610u_wifi_sta_vxxxx_dpo_xxxxxxxx.tar.bz2
+     go to "mt7610u_wifi_sta_vxxxx_dpo_xxxxxxxx" directory.
+    
+
+
+2> In Makefile
+	 
+     set the "MODE = STA" in Makefile and chose the TARGET to Linux by set "TARGET = LINUX"
+	 
+     define the linux kernel source include file path LINUX_SRC
+	 
+     modify to meet your need.
+
+
+3> In os/linux/config.mk 
+	
+     define the GCC and LD of the target machine
+	
+     define the compiler flags CFLAGS
+	
+     modify to meet your need.
+     ** Build for being controlled by NetworkManager or wpa_supplicant wext functions
+	   
+         Please set 'HAS_WPA_SUPPLICANT=y' and 'HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=y'.
+	   	   
+         => $wpa_supplicant -Dwext -ira0 -c wpa_supplicant.conf -d
+     ** Build for being controlled by WpaSupplicant with Ralink Driver
+	   
+         Please set 'HAS_WPA_SUPPLICANT=y' and 'HAS_NATIVE_WPA_SUPPLICANT_SUPPORT=n'.
+	   
+         => $wpa_supplicant -Dralink -ira0 -c wpa_supplicant.conf -d
+
+4> $make			
+	
+     # compile driver source code, need administrator.
+	
+     # To fix "error: too few arguments to function ¡¥iwe_stream_add_event"
+	 
+        => $patch -i os/linux/sta_ioctl.c.patch os/linux/sta_ioctl.c
+
+5> $make install
+     #install driver
+     #copy RT2870STA.dat to /etc/Wireless/RT2870STA/RT2870STA.dat
+
+6>$vi /etc/rc.d/rc.local
+     #input "ifconfig ra0 up"
+
+     ** Ubuntu 13.04 don't have this file.
+    $reboot
+
+7> unload driver    
+    
+     $ifconfig ra0 down
+
+     $make uninstall
+     $reboot
+
+
+Note: If you want to change os/linux/config.mk setting, please remove driver and  reinstall.
