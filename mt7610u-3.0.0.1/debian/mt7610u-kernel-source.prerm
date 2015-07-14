@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#DEBHELPER#
+
+CVERSION=`dpkg-query -W -f='${Version}' mt7610u-kernel-source | awk -F "-" '{print $1}' | cut -d\: -f2`
+case "$1" in
+    remove|upgrade)
+		echo "Removing all DKMS Modules"
+		dkms remove -m mt7610u -v $CVERSION --all > /dev/null
+		echo "Done."
+        ;;
+esac
