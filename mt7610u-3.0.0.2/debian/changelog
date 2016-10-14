@@ -1,3 +1,9 @@
+mt7610u (3.0.0.2-0ubuntu3~ppa1v) yakkety; urgency=low
+
+  * Patch from chenhaiq
+
+ -- Sugree Phatanapherom <sugree@gmail.com>  Tue, 14 Oct 2016 22:25:00 +0700
+
 mt7610u (3.0.0.2-0ubuntu2~ppa1v) vivid; urgency=low
 
   * Patch from sanrath
